@@ -1,4 +1,4 @@
-#Protvec: Amino Acid Embedding Representation for Machine Learning Features
+# Protvec: Amino Acid Embedding Representation for Machine Learning Features
 
 ## Objectives
 1. Extract features from amino acid sequences for machine learning
@@ -12,10 +12,10 @@ Predicting protein function with machine learning methods require informative fe
 
 ## Methods
 1. Preprocessing
-  1. Load dataset containing protein amino acid sequences and Asgari's embedding
-  2. [Convert sequences to three lists of non-overlapping 3-mer words](https://www.researchgate.net/profile/Mohammad_Mofrad/publication/283644387/figure/fig4/AS:341292040114179@1458381771303/Protein-sequence-splitting-In-order-to-prepare-the-training-data-each-protein-sequence.png) 
-  3. Convert 3-mers to numerical encoding using kmer indicies from Asgari's embedding (row dimension)
-  4. Generate skipgrams with [Keras function](https://keras.io/preprocessing/sequence/)  
+    1. Load dataset containing protein amino acid sequences and Asgari's embedding
+    2. [Convert sequences to three lists of non-overlapping 3-mer words](https://www.researchgate.net/profile/Mohammad_Mofrad/publication/283644387/figure/fig4/AS:341292040114179@1458381771303/Protein-sequence-splitting-In-order-to-prepare-the-training-data-each-protein-sequence.png) 
+    3. Convert 3-mers to numerical encoding using kmer indicies from Asgari's embedding (row dimension)
+    4. Generate skipgrams with [Keras function](https://keras.io/preprocessing/sequence/)  
         Output: [target word, context word](http://mccormickml.com/assets/word2vec/training_data.png), label  
         Label refers to true or false target/context pairing generated for the negative sampling technique             
 2. Training embedding
