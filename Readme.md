@@ -4,6 +4,13 @@
 1. Extract features from amino acid sequences for machine learning
 2. Use features to predict protein family and other structural properties
 
+## Requirements
+* anaconda3
+* Python 3.4
+* Tensorflow
+* Keras
+* joblib - for multiprocessing - pip install joblib
+
 ## Abstract
 This project attempts to reproduce the results from [Asgari 2015](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0141287) and to expand it to phage sequences and their protein families. Currently, Asgari's classification of protein families can be reproduced with his using his [trained embedding.](https://github.com/ehsanasgari/Deep-Proteomics). However, his results cannot be reproduced with current attempts to train using the skip-gram negative sampling method detailed in [this tutorial.](http://adventuresinmachinelearning.com/word2vec-keras-tutorial/) Training samples have been attempted with the SwissProt database. 
 
@@ -30,9 +37,12 @@ Predicting protein function with machine learning methods require informative fe
     3. For a given pfam classification, perform binary classification with all of its positive samples and randomly sample an equal amount of negative samples
     4. Train SVM model 
     
-    
 ## Resources 
 1. Intuition behind Word2Vec http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/
 2. Tutorial followed for implementation of skip-gram negative sampling (includes code) http://adventuresinmachinelearning.com/word2vec-keras-tutorial/
 3. Introduction to protein function prediction
 http://biofunctionprediction.org/cafa-targets/Introduction_to_protein_prediction.pdf
+
+## Author
+Mike Huang  
+huangjmike@gmail.com
